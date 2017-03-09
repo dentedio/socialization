@@ -35,5 +35,17 @@ module Socialization
     def mention_model=(klass)
       @mention_model = klass
     end
+
+    def watch_later_model
+      if @watch_later_model
+        @watch_later_model
+      else
+        ::WatchLater
+      end
+    end
+
+    def watch_later_model=(klass)
+      @watch_later_model = klass
+    end
   end
 end

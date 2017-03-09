@@ -34,6 +34,16 @@ module Socialization
       def acts_as_mentionable(opts = {})
         include Socialization::Mentionable
       end
+
+      # Make the current class a {Socialization::Watcher}
+      def acts_as_watcher(opts = {})
+        include Socialization::Watcher
+      end
+
+      # Make the current class a {Socialization::Watchable}
+      def acts_as_watchable(opts = {})
+        include Socialization::Watchable
+      end
     end
   end
 end
